@@ -1,0 +1,58 @@
+
+
+/*** -1 Color Scheme ***/
+$primary: #162c80;
+$secondary: #ff7673;
+//$secondary: #e46b69;
+$gold: #e7b880;
+$dark: #5d7384;
+$white: #fff;
+$grey: #e9e9ea;
+$light-grey: #f2f3f9;
+
+$transition: all .5s ease;
+
+$media-md: "(max-width : 1199px)";
+$media-sm: "(max-width : 991px)";
+$media-xs: "(max-width : 320px)";
+
+.t-primary 		{ color: $primary; }
+.t-secondary 	{ color: $secondary; }
+.t-gold 		{ color: $gold; }
+.t-dark 		{ color: $dark; }
+.t-white 		{ color: $white; }
+.t-grey 		{ color: $grey; }
+
+.b-primary 		{ background-color: $primary; }
+.b-secondary 	{ background-color: $secondary; }
+.b-gold 		{ background-color: $gold; }
+.b-dark 		{ background-color: $dark; }
+.b-white 		{ background-color: $white; }
+.b-grey 		{ background-color: $grey; }
+.b-light-grey	{ background-color: $light-grey; }
+
+
+
+
+
+@mixin font-h3 {
+	position: relative;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 3.7em;
+}
+
+@mixin font-h3-wline {
+	@include font-h3;
+	margin-bottom: 80px;
+	&:before {
+		content:"";
+		position: absolute; bottom: -25px; left: 180px;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		transform: translateX(-50%);
+		background-color: $primary;
+		width: 75px; height: 3px;
+	}
+}
+

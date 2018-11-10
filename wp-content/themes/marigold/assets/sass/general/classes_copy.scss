@@ -1,0 +1,159 @@
+/*
+ * 0: Classes
+ * This .scss loop will create "margin helpers" and "padding helpers" for use in your web projects.
+ * 
+ * 
+ * @package storefront
+ */
+
+
+// font-family
+$font-serif: 'LyonTextR', serif;
+$font-serif-b: 'LyonTextB', serif;
+$font-sserif: 'GTWalsheim', sans-serif;
+$trans-ease: all .5s ease;
+
+h1, h2, h3 { font-family: $font-sserif; font-weight: 500; }
+
+.t-serif { font-family: $font-serif; }
+.t-sanserif { font-family: $font-sserif; }
+
+.t-underline {
+	text-decoration: underline;
+}
+
+// classes
+html, body {
+	width: 100%; height: 100%;
+    padding: 0; margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $font-serif;
+
+}
+section, footer {
+	position: relative; width: 100%;
+}
+
+a {
+	&,&:hover, &:focus{
+		transition: $trans-ease;
+		outline: none;
+	}
+
+	&:hover, &:focus{
+		border: 0px;
+		//text-decoration: none;
+	}
+}
+
+.subtitle{
+	font-size: 24px;
+	font-family: $font-sserif;
+}
+
+/*** -3 Classes ***/
+	.has-overlay {
+		position: absolute; top: 0; left: 0;
+		width: 100%; height: 100%;
+	}
+	.has-absolute { position: relative; }
+	.absolute-xy {
+		position: absolute;
+		top: 50%; left: 50%;
+		-webkit-transform: translate(-50%,-50%);
+		-moz-transform: translate(-50%,-50%);
+		-o-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+	}
+	.absolute-x {
+		position: absolute; left: 50%;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+		width: 100%;
+	}
+	.absolute-y {
+		position: absolute; top: 50%;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+		width: 100%;
+	}
+
+	.table-div { display: table; }
+	.table-row { display: table-row; }
+	.table-cell {
+	    float: none;
+	    display: table-cell;
+	    vertical-align: middle;
+	}
+
+	.has-image {
+		display: block;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	
+
+// arches 
+$basic-unit : 32.5px;
+$basic-unit-phone : 20px;
+.arc {
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	&.ftop {
+		position: absolute; top: -32.5px; left: 50%;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	&.fbottom {
+		position: absolute; bottom: -31.5px; left: 50%;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	&.ones {
+		width: 65px; height: 32.5px;
+		background-image: url(http://marigold.awdweb.com.au/wp-content/uploads/2018/08/arc-ones.png);
+	}
+	&.twos {
+		width: 65px; height: 65px;
+		background-image: url(http://marigold.awdweb.com.au/wp-content/uploads/2018/08/arc-twos.png);
+	}
+	&.threes {
+		width: 65px; height: 100px;
+		background-image: url(http://marigold.awdweb.com.au/wp-content/uploads/2018/08/arc-threes.png);
+	}
+	&.os {
+		width: 65px; height: 65px;
+		background-image: url(http://marigold.awdweb.com.au/wp-content/uploads/2018/08/arc-os.png);
+	}
+	&.halfa {
+		width: 65px; height: 32.5px;
+		background-image: url(http://marigold.awdweb.com.au/wp-content/uploads/2018/08/arc-halfa.png);
+		bottom: 0;
+	}
+
+	@media(max-width: 565px){
+		width: 40px !important;
+
+		&.ftop{
+			top: -40px;
+		}
+		&.fbottom {
+			bottom: -40px;
+		}
+	}
+}
+
+
+
+
+
